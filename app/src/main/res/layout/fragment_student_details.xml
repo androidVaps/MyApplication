@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.san.myapplication.NewkioaskDesign.MenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/img_backIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="left|center"
+                android:src="@drawable/ic_arrow_back_white_144dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:gravity="left|center"
+                android:text="Student Details"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Student Details"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:paddingLeft="60dp"
+                android:layout_weight="1.7" />-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="7"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="3.5"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text="Admission number" />
+
+                <TextView
+
+                    style="@style/row_textView1"
+                    android:text="Class" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text="Section" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text="Date of admission" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text="Email-Id" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text="Contact number" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:layout_weight="1"
+                    android:text="Date of Birth" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+
+                android:weightSum="7">
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/row_textView1"
+                    android:layout_weight="1"
+                    android:text=":"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="6"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <TextView
+                    android:id="@+id/edit_stud_regno"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_class"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_section"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_stud_doa"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_stud_email"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_stud_contact"
+                    style="@style/row_textView1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+                <TextView
+                    android:id="@+id/edit_stud_dob"
+                    style="@style/row_textView1"
+                    android:layout_weight="1"
+                    android:paddingLeft="36dp"
+                    android:text="kbasjdgha" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"/>
+
+            <ImageView
+                android:id="@+id/img_print"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_margin="18dp"
+                android:src="@drawable/ic_print_black_72dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

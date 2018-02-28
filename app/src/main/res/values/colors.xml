@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#fcfbfb</color>
+    <color name="colorOrangeLight">#fab790</color>
+    <color name="colorPinkLight">#f2bbe0</color>
+    <color name="colorPinkDark">#df55b2</color>
+    <color name="colorBlueLight">#ccd1f5</color>
+    <color name="colorBlueLighter">#e4e6f7</color>
+    <color name="colorGreenLight">#eef9ec</color>
+    <color name="colorPurpleDark">#b111f1</color>
+
+    <!-- Calender colors-->
+    <color name="green">#8FCC85</color>
+    <color name="blue">#ff33b5e5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#ffffffff</color>
+
+    <color name="pay_button">#42e7ad</color>
+    <color name="layout_bg">#42cbe7</color>
+    <color name="layout_bg1">#38b0c9</color>
+    <color name="login_cancel">#fa8f60</color>
+    <color name="login_ok">#3a92c6</color>
+
+
+    <color name="layout_bg0">#f9df7a</color>
+
+    <color name="orange_400">#FFA726</color>
+    <color name="orange_600">#FB8C00</color>
+
+    <color name="teal_100">#B2DFDB</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="teal_400">#26A69A</color>
+    <color name="teal_600">#00897B</color>
+
+    <color name="deep_purple_400">#7E57C2</color>
+    <color name="deep_purple_600">#5E35B1</color>
+
+    <color name="deep_orange_400">#FF7043</color>
+    <color name="deep_orange_600">#F4511E</color>
+
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_200">#81D4FA</color>
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="light_blue_600">#039BE5</color>
+    <color name="light_blue_700">#0288D1</color>
+
+    <color name="ambar_100">#FFECB3</color>
+    <color name="ambar_200">#FFE082</color>
+
+    <color name="purple_100">#E1BEE7</color>
+    <color name="purple_200">#CE93D8</color>
+
+    <color name="cyan_400">#26C6DA</color>
+    <color name="cyan_600">#00ACC1</color>
+
+    <color name="blue_7_1">#9999FF</color>
+    <color name="blue_7_2">#7676DE</color>
+
+    <color name="green_8_1">#339966</color>
+    <color name="green_8_2">#287D53</color>
+
+    <color name="redlight_9_1">#F57A7A</color>
+    <color name="redlight_9_2">#D65353</color>
+
+    <color name="orange_10_1">#Ff9966</color>
+    <color name="orange_10_2">#D47748</color>
+
+    <color name="orange100">#FFE0B2</color>
+    <color name="orange200">#FFAB91</color>
+    <color name="orange300">#FF8A65</color>
+    <color name="orange400">#FF7043</color>
+
+    <color name="red_11_1">#Cc3300</color>
+    <color name="red_11_2">#9E3816</color>
+
+    <color name="pink_12_1">#Cc3366</color>
+    <color name="pink_12_2">#A62450</color>
+    <color name="pink_300">#F06292</color>
+    <color name="pink_400">#EC407A</color>
+
+    <color name="greenDark_13_1">#999933</color>
+    <color name="greenDark_13_2">#7A7A22</color>
+
+    <color name="brown_14_1">#996633</color>
+    <color name="brown_14_2">#855220</color>
+
+    <color name="darkBlue_15_1">#336699</color>
+    <color name="darkBlue_15_2">#225282</color>
+
+    <color name="pinkLight_16_1">#Cc6699</color>
+    <color name="pinkLight_16_2">#A33F71</color>
+
+    <color name="pinkDark_17_1">#993366</color>
+    <color name="pinkDark_17_2">#751D49</color>
+
+    <color name="orangeDark_18_1">#B53B12</color>
+    <color name="orangeDark_18_2">#8F3111</color>
+
+    <array name="marksBoxBackground">
+        <item>@color/teal_400</item>
+        <item>@color/deep_purple_400</item>
+        <item>@color/deep_orange_400</item>
+        <item>@color/light_blue_400</item>
+        <item>@color/ambar_100</item>
+        <item>@color/purple_100</item>
+        <item>@color/cyan_400</item>
+        <item>@color/orange_400</item>
+        <item>@color/blue_7_1</item>
+        <item>@color/green_8_1</item>
+        <item>@color/redlight_9_1</item>
+        <item>@color/orange_10_1</item>
+        <item>@color/red_11_1</item>
+        <item>@color/pink_12_1</item>
+        <item>@color/greenDark_13_1</item>
+        <item>@color/brown_14_1</item>
+        <item>@color/darkBlue_15_1</item>
+        <item>@color/pinkLight_16_1</item>
+        <item>@color/pinkDark_17_1</item>
+        <item>@color/orangeDark_18_1</item>
+    </array>
+
+    <array name="subjectBoxBackground">
+        <item>@color/teal_600</item>
+        <item>@color/deep_purple_600</item>
+        <item>@color/deep_orange_600</item>
+        <item>@color/light_blue_600</item>
+        <item>@color/ambar_200</item>
+        <item>@color/purple_200</item>
+        <item>@color/cyan_600</item>
+        <item>@color/orange_600</item>
+        <item>@color/blue_7_2</item>
+        <item>@color/green_8_2</item>
+        <item>@color/redlight_9_2</item>
+        <item>@color/orange_10_2</item>
+        <item>@color/red_11_2</item>
+        <item>@color/pink_12_2</item>
+        <item>@color/greenDark_13_2</item>
+        <item>@color/brown_14_2</item>
+        <item>@color/darkBlue_15_2</item>
+        <item>@color/pinkLight_16_2</item>
+        <item>@color/pinkDark_17_2</item>
+        <item>@color/orangeDark_18_2</item>
+    </array>
+
+</resources>

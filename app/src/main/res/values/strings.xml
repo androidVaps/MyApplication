@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">VAPS KIOASK</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="txt_header_login">Login</string>
+    <string name="Rs">\u20B9</string>
+    <string-array name="baldwinInstitute_array">
+        <item>Select Institute</item>
+        <item>BBHS</item>
+        <item>BCEHS</item>
+        <item>BGHSRS</item>
+    </string-array>
+
+    <string name="logout">Log out</string>
+    <string name="title_activity_fees">Fees Detailsss</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kiosk_footer">Design and Developed by: VAPS Technosoft Pvt. Ltd.</string>
+
+    <string name="USB_Driver_Success">USB driver success</string>
+    <string name="USB_Driver_Failed">USB driver failed</string>
+
+</resources>

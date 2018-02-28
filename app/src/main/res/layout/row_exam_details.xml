@@ -1,0 +1,81 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="0dp"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/subMarks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:text="90"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:textColor="@color/white"
+            android:contentDescription="@string/action_settings"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/subNames"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:text="country_name"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_below="@+id/subMarks"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/subMarks"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:background="@color/deep_orange_400"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/subNames"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:background="@color/deep_orange_600"
+        android:layout_marginBottom="10dp"
+        android:text="0" />
+
+</LinearLayout>-->
