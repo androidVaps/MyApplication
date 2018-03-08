@@ -2,12 +2,18 @@ package com.example.san.myapplication.NewkioaskDesign;
 
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -15,6 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.san.myapplication.Adapters.TimeTableAdapter;
 import com.example.san.myapplication.AppSingleton;
 import com.example.san.myapplication.Module.TTDay;
 import com.example.san.myapplication.R;
@@ -37,7 +44,9 @@ public class TimeTableFragment extends Fragment
     private static final String URL = "https://stagingmobileapp.azurewebsites.net/api/login/Timetable";
     public static String TAG = StudentDeatilsActivity.class.getSimpleName();
     ProgressDialog progressDialog;
-
+    ArrayList<ArrayList<TTDay>> al_sum_week = new ArrayList<>();
+    TimeTableAdapter mAdapterTT;
+    RecyclerView recyclerViewTT;
     public TimeTableFragment() {
         // Required empty public constructor
     }
@@ -49,6 +58,40 @@ public class TimeTableFragment extends Fragment
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_time_table, container, false);
         volleyJsonObjectRequest(URL);
+        recyclerViewTT = (RecyclerView) v.findViewById(R.id.recyclerView_timetable);
+
+        ImageView img_back_button = (ImageView) v.findViewById(R.id.img_backIcon);
+        img_back_button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getActivity(), MainActivityKioask.class);
+                getActivity().startActivity(myIntent);
+                getActivity().finish();
+            }
+        });
+
+
+      /*  final int N = 10; // total number of textviews to add
+
+        final TextView[] myTextViews = new TextView[N]; // create an empty array;
+
+        for (int i = 0; i < N; i++) {
+            // create a new textview
+            final TextView rowTextView = new TextView(getActivity());
+                rowTextView.setId(i);
+            // set some properties of rowTextView or something
+            rowTextView.setText("This is row #" + i);
+
+            // add the textview to the linearlayout
+            myLinearLayout.addView(rowTextView);
+
+            // save a reference to the textview for later
+            myTextViews[i] = rowTextView;
+
+            myTextViews[i].setWi
+
+        }*/
         return v;
     }
 
@@ -74,7 +117,6 @@ public class TimeTableFragment extends Fragment
 //                                Toast.makeText(StudentDeatilsActivity.this, "got data", Toast.LENGTH_SHORT).show();
 
                             }*/
-
                             timeTableDataParse(response);
 
                         } catch (Exception e) {
@@ -101,7 +143,7 @@ public class TimeTableFragment extends Fragment
 
 
                 params.put("ASMCL_Id", 34);
-                params.put("ASMS_Id", 20);
+                params.put("ASMS_Id", 18);
                 params.put("ASMAY_Id", 1);
                 params.put("MI_Id", 6);
 
@@ -131,34 +173,39 @@ public class TimeTableFragment extends Fragment
         try {
             JSONArray objects = jsonObject.getJSONArray("TimeTable");
 
-
-            ArrayList<TTDay> al_weeks = new ArrayList<TTDay>();
+            ArrayList<TTDay> al_weeks ;
 
             for (int i = 0 ; i < objects.length() ; i++)
             {
-
+                al_weeks = new ArrayList<TTDay>();
                 JSONObject weekObject = objects.getJSONObject(i);
                 JSONArray dayObjects = weekObject.getJSONArray("TTData");
 
                 for (int j = 0 ; j < dayObjects.length() ; j++)
                 {
-
-                    int PeriodName = (int) dayObjects.getJSONObject(i).get("PeriodName");
-                    String staffName = (String) dayObjects.getJSONObject(i).get("staffName");
-                    String SubjectName = (String) dayObjects.getJSONObject(i).get("SubjectName");
+                    JSONObject periodObject = dayObjects.getJSONObject(j);
+                    int PeriodName =  periodObject.getInt("PeriodName");
+                    String staffName = periodObject.getString("staffName");
+                    String SubjectName = periodObject.getString("SubjectName");
 
                     TTDay ttDay = new TTDay(PeriodName,staffName,SubjectName);
                     al_weeks.add(ttDay);
                 }
-
-
+               // if(i != 2)
+                al_sum_week.add(al_weeks);
 
             }
-
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        mAdapterTT = new TimeTableAdapter(al_sum_week);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+        recyclerViewTT.setLayoutManager(mLayoutManager);
+        recyclerViewTT.setItemAnimator(new DefaultItemAnimator());
+        recyclerViewTT.setAdapter(mAdapterTT);
+
     }
 
 

@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -69,6 +71,15 @@ public class MainActivityKioask extends AppCompatActivity implements View.OnClic
         marque_text.setSelected(true);
 
         txt_stud_name = (TextView) findViewById(R.id.edit_stud_name);
+        ImageView myText = (ImageView) findViewById(R.id.flash );
+
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(500); //You can manage the blinking time with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        myText.startAnimation(anim);
+
 
         VerticalScrollingTextView tvContent1 = (VerticalScrollingTextView) findViewById(R.id.tvContent1);
         tvContent1.setMovementMethod(new ScrollingMovementMethod());

@@ -3,6 +3,8 @@ package com.example.san.myapplication.NewkioaskDesign;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +30,10 @@ import com.example.san.myapplication.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -240,17 +246,18 @@ public class KioaskLogin extends AppCompatActivity
 
     public void slideShow()
     {
-           final ImageView img = (ImageView) findViewById(R.id.img_gallary);
+          final ImageView img = (ImageView) findViewById(R.id.img_gallary);
 
-        final int[] imageArray = { R.drawable.pic1, R.drawable.pic2};
+          final int[] imageArray = { R.drawable.pic1, R.drawable.pic2};
+    //    final String[] imageArray = {"http://androidblog.esy.es/images/cupcake-1.png"};
 
         final Handler handler = new Handler();
         Runnable runnable = new Runnable() {
             int i = 0;
 
             public void run() {
-                img.setImageResource(imageArray[i]);
-                i++;
+              img.setImageResource(imageArray[i]);
+              i++;
                 if (i > imageArray.length - 1) {
                     i = 0;
                 }

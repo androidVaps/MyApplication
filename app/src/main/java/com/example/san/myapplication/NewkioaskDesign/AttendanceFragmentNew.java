@@ -42,8 +42,8 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AttendanceFragmentNew extends Fragment implements AdapterView.OnItemSelectedListener {
-
+public class AttendanceFragmentNew extends Fragment implements AdapterView.OnItemSelectedListener
+{
     private static String URL = "http://stagingmobileapp.azurewebsites.net/api/login/StudentYearlyAttendance";
     private static String TAG = AttendanceFragmentNew.class.getSimpleName();
     ProgressDialog progressDialog;
@@ -53,13 +53,14 @@ public class AttendanceFragmentNew extends Fragment implements AdapterView.OnIte
     JSONObject jsonAttendanceResponse;
     Spinner spinner_academy_name;
 
-    public AttendanceFragmentNew() {
+    public AttendanceFragmentNew()
+    {
         // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_attendance_new, container, false);
         recyclerView = (RecyclerView) v.findViewById(R.id.recy_attendance);
@@ -86,8 +87,6 @@ public class AttendanceFragmentNew extends Fragment implements AdapterView.OnIte
         spinner_academy_name.setOnItemSelectedListener(this);
 
          volleyJsonObjectAttendanceRequest(URL, 3, 5, 944);
-
-
 
         return v;
     }
