@@ -115,7 +115,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimaryDark"
-            android:text="Abscent Days"
+            android:text="Absent Days"
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20sp"
